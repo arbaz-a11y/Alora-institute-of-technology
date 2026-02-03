@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alora Institution - AI-Powered Exam Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="data:image/jpeg;base64,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" class="logo-img" alt="Alora Logo">
+                    <span>Alora Institution</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('courses')">Courses</a></li>
+                    <li><a onclick="showPage('about')">About Us</a></li>
+                    <li><a onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Welcome to <span class="highlight">Alora Institution</span></h1>
+                        <button class="btn-primary" onclick="showPage('courses')">Get Started</button>
+                    </div>
+                    <div class="hero-graphic">
+                        <div class="graphic-pattern"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose">
+            <div class="container">
+                <h2 class="section-title">Why Choose Alora?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Expert & Dedicated Faculty</h3>
+                        <p>Our faculty members are experienced, approachable, and deeply committed to student success. Doubts are encouraged, and learning is made simple and stress-free.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Regular Tests & Detailed Feedback</h3>
+                        <p>Frequent tests, detailed performance reports, and one-to-one feedback help students track progress and stay exam-ready at all times.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Expert Guidance</h3>
+                        <p>Comprehensive coverage of DCET, NEET, KCET, JEE, and Foundation courses with subject-wise preparation materials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Courses Page -->
+    <div id="courses" class="page">
+        <section class="courses-page">
+            <div class="container">
+                <h2 class="section-title">Our Courses</h2>
+                
+                <div id="coursesGrid" class="courses-grid">
+                    <div class="course-card" onclick="showCourseDetails('dcet')">
+                        <h3>DCET</h3>
+                        <p>Diploma Common Entrance Test</p>
+                    </div>
+                    <div class="course-card" onclick="showCourseDetails('jee')">
+                        <h3>JEE</h3>
+                        <p>Joint Entrance Examination</p>
+                    </div>
+                    <div class="course-card" onclick="showCourseDetails('neet')">
+                        <h3>NEET</h3>
+                        <p>National Eligibility Entrance Test</p>
+                    </div>
+                    <div class="course-card" onclick="showCourseDetails('kcet')">
+                        <h3>KCET</h3>
+                        <p>Karnataka Common Entrance Test</p>
+                    </div>
+                    <div class="course-card" onclick="showCourseDetails('foundation')">
+                        <h3>FOUNDATION</h3>
+                        <p>Foundation Course</p>
+                    </div>
+                </div>
+
+                <!-- DCET Details -->
+                <div id="dcetDetails" class="course-details">
+                    <button class="back-btn" onclick="backToCourses()">← Back to Courses</button>
+                    <h3>DCET - Diploma Common Entrance Test</h3>
+                    <div class="semester-options">
+                        <button class="semester-btn" onclick="showSemesterInfo('sem5')">5th Semester</button>
+                        <button class="semester-btn" onclick="showSemesterInfo('sem6')">6th Semester</button>
+                        <button class="semester-btn" onclick="showSemesterInfo('crash')">Crash Course</button>
+                    </div>
+
+                    <div id="sem5Info" class="semester-info">
+                        <h4>5th Semester Schedule</h4>
+                        <p><strong>Saturday:</strong> 2:30 PM to 5:00 PM</p>
+                        <p><strong>Sunday:</strong> 10:30 AM to 12:00 PM</p>
+                        <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                    </div>
+
+                    <div id="sem6Info" class="semester-info">
+                        <h4>6th Semester Schedule</h4>
+                        <p><strong>Daily Classes:</strong> Monday to Saturday</p>
+                        <p><strong>Timing:</strong> 8:30 AM to 9:30 AM</p>
+                        <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                    </div>
+
+                    <div id="crashInfo" class="semester-info">
+                        <h4>Crash Course</h4>
+                        <p>Intensive preparation program for DCET exam.</p>
+                        <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                    </div>
+                </div>
+
+                <!-- Other Course Details -->
+                <div id="jeeDetails" class="course-details">
+                    <button class="back-btn" onclick="backToCourses()">← Back to Courses</button>
+                    <h3>JEE - Joint Entrance Examination</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-gray); margin-bottom: 1.5rem;">Comprehensive preparation for JEE Main and Advanced examinations.</p>
+                    <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                </div>
+
+                <div id="neetDetails" class="course-details">
+                    <button class="back-btn" onclick="backToCourses()">← Back to Courses</button>
+                    <h3>NEET - National Eligibility Entrance Test</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-gray); margin-bottom: 1.5rem;">Expert guidance for NEET examination preparation.</p>
+                    <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                </div>
+
+                <div id="kcetDetails" class="course-details">
+                    <button class="back-btn" onclick="backToCourses()">← Back to Courses</button>
+                    <h3>KCET - Karnataka Common Entrance Test</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-gray); margin-bottom: 1.5rem;">Specialized coaching for Karnataka CET preparation.</p>
+                    <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                </div>
+
+                <div id="foundationDetails" class="course-details">
+                    <button class="back-btn" onclick="backToCourses()">← Back to Courses</button>
+                    <h3>Foundation Course</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-gray); margin-bottom: 1.5rem;">Strong foundation building for competitive exam success.</p>
+                    <button class="btn-interested" onclick="showPage('contact')">Interested?</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <!-- About Title -->
+        <section style="padding: 4rem 0 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+            </div>
+        </section>
+        
+        <!-- Mission Section -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23c4b5a0' width='800' height='600'/%3E%3Cg%3E%3Crect fill='%23d4c5b0' x='0' y='0' width='800' height='200'/%3E%3Crect fill='%23b4a590' x='0' y='200' width='800' height='200'/%3E%3Crect fill='%23a49580' x='0' y='400' width='800' height='200'/%3E%3C/g%3E%3Ctext x='400' y='300' font-family='Arial, sans-serif' font-size='24' fill='%23ffffff' text-anchor='middle'%3ELibrary Study Hall%3C/text%3E%3C/svg%3E" alt="Library Study Hall">
+                    </div>
+                    <div class="about-text">
+                        <h2>Our Mission</h2>
+                        <p>Alora Institution is dedicated to revolutionizing competitive exam preparation through cutting-edge AI technology. We believe every student deserves personalized guidance to achieve their academic goals.</p>
+                        <p>Our platform combines comprehensive mock tests with intelligent analysis, helping students identify their strengths and weaknesses. With courses tailored for DCET, NEET, KCET, JEE, and Foundation exams, we provide the tools and insights needed for success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer Section -->
+        <section class="offerings">
+            <div class="container">
+                <h2 class="section-title">What We Offer</h2>
+                <div class="offerings-grid">
+                    <div class="offering-card">
+                        <h3>Comprehensive Mock Tests</h3>
+                        <p>Subject-wise tests designed to match real exam patterns and difficulty levels.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Instant feedback with personalized recommendations for improvement.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h3>Progress Tracking</h3>
+                        <p>Monitor your performance over time with detailed analytics and insights.</p>
+                    </div>
+                    <div class="offering-card">
+                        <h3>24/7 AI Assistant</h3>
+                        <p>Get instant answers to your questions with our intelligent chatbot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+91 7204513619</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>info@alorainstitution.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Prithi Asraya Building, Opposite Harsh Fast Food, Sirraad, Vidyanagar, Hubli-580021, Karnataka</p>
+                    </div>
+                </div>
+
+                <div class="get-in-touch">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about our courses or need assistance? We're here to help! Reach out to us through any of the channels above, or use our AI chatbot for instant support.</p>
+                    <p class="office-hours">Office Hours: Monday - Saturday, 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-button" onclick="toggleChatbot()">
+        <i class="fas fa-headset"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-body">
+            <div class="course-selection">
+                <h4>Select Course</h4>
+                <div class="course-buttons">
+                    <button class="course-btn" onclick="selectCourse('DCET')">DCET</button>
+                    <button class="course-btn" onclick="selectCourse('JEE')">JEE</button>
+                    <button class="course-btn" onclick="selectCourse('NEET')">NEET</button>
+                    <button class="course-btn" onclick="selectCourse('KCET')">KCET</button>
+                    <button class="course-btn" onclick="selectCourse('Foundation')">Foundation</button>
+                </div>
+            </div>
+
+            <div class="student-login" id="studentLogin">
+                <h4>Student Login</h4>
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="number" id="rollNumber" placeholder="Roll Number">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="studentName" placeholder="Student Name">
+                    </div>
+                </div>
+                <button class="btn-view-analysis" onclick="viewAnalysis()">View Analysis</button>
+            </div>
+
+            <div class="test-selection" id="testSelection">
+                <h4>Select Test</h4>
+                <div class="test-buttons">
+                    <button class="test-btn" onclick="selectTest('test1')">Test 1</button>
+                    <button class="test-btn" onclick="selectTest('test2')">Test 2</button>
+                </div>
+            </div>
+
+            <div class="marks-display" id="marksDisplay">
+                <div class="marks-header">
+                    <h4 class="marks-title-text" id="marksTitle">DCET Marks</h4>
+                    <div class="document-links" id="documentLinks">
+                        <!-- Document links will be populated here -->
+                    </div>
+                </div>
+                <div class="marks-list" id="marksList">
+                    <!-- Marks will be populated here -->
+                </div>
+                <button class="btn-ai-analyze" onclick="showAIAnalysis()">AI Analyze My Performance</button>
+            </div>
+
+            <div class="ai-analysis" id="aiAnalysis">
+                <h4>AI Performance Analysis</h4>
+                <div class="analysis-section">
+                    <h5>Weak Subjects:</h5>
+                    <p id="weakSubjects">FEEE, Maths</p>
+                </div>
+                <div class="analysis-section">
+                    <h5>Reason:</h5>
+                    <p id="reason">Conceptual clarity and insufficient numerical practice.</p>
+                </div>
+                <div class="analysis-section">
+                    <h5>AI Suggestions:</h5>
+                    <ul id="suggestions">
+                        <li>Revise core formulas daily</li>
+                        <li>Solve previous year DCET questions</li>
+                        <li>Focus more on numerical problem-solving</li>
+                        <li>Allocate extra 1 hour daily for weak subjects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
